@@ -1,0 +1,41 @@
+{
+  "name": "react-parcel-app",
+  "version": "1.0.0",
+  "description": "react app using parcel",
+  "browserslist": "> 0.5%, last 5 versions, not dead",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "prepare": "husky install",
+    "prettier:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "eslint:check": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "eslint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
+  },
+  "lint-staged": {
+    "**/*.{js,ts,jsx,tsx}": [
+      "npm run prettier:fix",
+      "npm run eslint:fix"
+    ]
+  },
+  "author": "Utku Demir",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.2",
+    "parcel": "^2.2.1",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
